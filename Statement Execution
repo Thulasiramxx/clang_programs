@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int integerVal;
+    float floatVal;
+    char charVal;
+    char str1[100];
+    char str2[100];
+
+    // Read integer
+    scanf("%d", &integerVal);
+
+    // Read float
+    scanf("%f", &floatVal);
+
+    // Read char (consume leftover newline first)
+    getchar();  // to consume newline after float input
+    scanf("%c", &charVal);
+
+    // Read first string (single word)
+    scanf("%s", str1);
+
+    // Read second string (whole line including spaces)
+    getchar(); // consume newline after first string
+    fgets(str2, sizeof(str2), stdin);
+
+    // Remove trailing newline from fgets
+    int i = 0;
+    while (str2[i] != '\0') {
+        if (str2[i] == '\n') {
+            str2[i] = '\0';
+            break;
+        }
+        i++;
+    }
+
+    // Print output
+    printf("Integer is %d\n", integerVal);
+    printf("Float is %.2f\n", floatVal);
+    printf("Character is %c\n", charVal);
+    printf("Strings are %s and %s\n", str1, str2);
+
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
