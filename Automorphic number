@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if (num < 0 || num > 9) {
+        printf("Invalid Input");
+    } else {
+        int square = num * num;
+        if (square % 10 == num) {
+            printf("Automorphic Number");
+        } else {
+            printf("Not Automorphic Number");
+        }
+    }
+    return 0;
+}
