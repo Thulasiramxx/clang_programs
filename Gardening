@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+  int rows, cols, tree_no;
+
+  scanf("%d", &rows);
+  scanf("%d", &cols);
+  scanf("%d", &tree_no);
+
+  int mango_col1 = 2;
+  int mango_col2 = cols - 1;
+
+  int col_no = (tree_no - 1) / rows + 1;
+
+  if (col_no == mango_col1 || col_no == mango_col2) {
+    printf("It is a mango tree");
+  } else {
+    printf("It is not a mango tree");
+  }
+
+  return 0;
+}
