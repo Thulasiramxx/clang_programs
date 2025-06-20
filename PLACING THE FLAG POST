@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int x, y, length;
+
+    scanf("%d", &x);
+    scanf("%d", &y);
+    scanf("%d", &length);
+
+    printf("x-coordinate:%d\n", x);
+    printf("y-coordinate:%d\n", y);
+    printf("Length:%d\n", length);
+
+    printf("Centre of the ground is at (%d,%d)\n", x + (length / 2), y + (length / 2));
+
+    return 0;
+}
