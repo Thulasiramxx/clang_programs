@@ -1,0 +1,34 @@
+
+#include <stdio.h>
+
+int main() {
+    int L, B, L1, B1, L2, B2;
+    scanf("%d %d %d %d %d %d", &L, &B, &L1, &B1, &L2, &B2);
+
+    if (((L1 * B1) + (L2 * B2)) <= (L * B)) {
+         if ((L1 <= L && B1 <= B) && (L2 <= L && B2 <= B))
+         {
+
+            if((L1+L2 <= L && B1 <= B && B2 <=B) || (B1+B2 <= B && L1 <= L && L2 <= L) || (L1+L2 <= L && B1 <= B && B2 <= B) || (B1+L2 <= B && L1 <= L && B2 <= L ) || (L1+B2 <= L && B1 <= B && L2 <= L ) || (B1+L2 <= L && L1 <= B && B2 <= L) || (L1+B2 <= B && B1 <= L && L2 <= L)  )
+            {
+
+                    printf("Raj can fix both painting");
+
+            }
+            else{
+
+               printf("Raj cannot fix both painting");
+            }
+
+
+         }
+         else {
+            printf("Raj cannot fix both painting");
+         }
+
+    } else {
+        printf("Raj cannot fix both painting");
+    }
+
+    return 0;
+}
